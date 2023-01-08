@@ -3,6 +3,7 @@ import mongoose from 'mongoose'
 import multer from 'multer'
 import cors from 'cors'
 import * as dotenv from 'dotenv'
+import fs from 'fs'
 
 import { registerValidation, loginValidation } from './validations/auth.js'
 import { postCreateValidation } from './validations/post.js'
