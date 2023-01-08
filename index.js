@@ -12,7 +12,6 @@ import { checkAuth, handleValidationErrors } from './utils/index.js'
 dotenv.config()
 
 mongoose
-    .set('strictQuery', false)
     .connect(process.env.MONGO_URL)
     .then(() => console.log('DB connected'))
     .catch((error) => console.log('DB error', error))
