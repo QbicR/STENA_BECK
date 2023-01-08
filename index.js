@@ -10,7 +10,7 @@ import { checkAuth, handleValidationErrors } from './utils/index.js'
 
 mongoose
     .set('strictQuery', false)
-    .connect(process.env.MONGO_URL || 'mongodb://admin:IL7S2KLwNbl95Sz1@SG-handy-lungSTENAe-3610-55711.servers.mongodirector.com:27017/admin')
+    .connect(process.env.MONGO_URL)
     .then(() => console.log('DB connected'))
     .catch((error) => console.log('DB error', error))
 
