@@ -2,11 +2,14 @@ import express from 'express'
 import mongoose from 'mongoose'
 import multer from 'multer'
 import cors from 'cors'
+import * as dotenv from 'dotenv'
 
 import { registerValidation, loginValidation } from './validations/auth.js'
 import { postCreateValidation } from './validations/post.js'
 import { PostController, UserController } from './controllers/index.js'
 import { checkAuth, handleValidationErrors } from './utils/index.js'
+
+dotenv.config()
 
 mongoose
     .set('strictQuery', false)
